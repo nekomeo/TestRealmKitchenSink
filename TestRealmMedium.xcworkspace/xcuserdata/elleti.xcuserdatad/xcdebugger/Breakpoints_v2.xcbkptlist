@@ -6,47 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestRealmMedium/NewSecondViewController.swift"
-            timestampString = "550701052.354443"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestRealmMedium/NewSecondViewController.swift"
-            timestampString = "550701052.354826"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestRealmMedium/Model.swift"
-            timestampString = "550701052.355086"
+            timestampString = "550711173.963843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "getTokenInfo(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,13 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestRealmMedium/Model.swift"
-            timestampString = "550701052.355143"
+            timestampString = "550711173.964312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "getTokenInfo(completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestRealmMedium.APIManager.getTokenInfo(completion: (Swift.Optional&lt;Swift.Array&lt;TestRealmMedium.List&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestRealmMedium"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elleti/Projects/Swift/Test%20Folder/TestRealmMedium/TestRealmMedium/Model.swift"
+                  timestampString = "550711174.065801"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "3142">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TestRealmMedium.APIManager.getTokenInfo(completion: (Swift.Optional&lt;Swift.Array&lt;TestRealmMedium.List&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestRealmMedium"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elleti/Projects/Swift/Test%20Folder/TestRealmMedium/TestRealmMedium/Model.swift"
+                  timestampString = "550711174.068942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "744">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestRealmMedium/RestAPIViewController.swift"
-            timestampString = "550701052.3552001"
+            timestampString = "550711173.964586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestRealmMedium/Model.swift"
-            timestampString = "550701052.355395"
+            timestampString = "550711173.964631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "getTokenInfo(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,45 +106,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestRealmMedium/NewSecondViewController.swift"
-            timestampString = "550701052.3554389"
+            timestampString = "550711173.964831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "updateValues()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;TestRealmMedium.List&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TestRealmMedium.NewSecondViewController.tableView(__ObjC.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
-                  moduleName = "TestRealmMedium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elleti/Projects/Swift/Test%20Folder/TestRealmMedium/TestRealmMedium/NewSecondViewController.swift"
-                  timestampString = "550701052.436776"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "21">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;TestRealmMedium.List&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TestRealmMedium.NewSecondViewController.tableView(__ObjC.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
-                  moduleName = "TestRealmMedium"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elleti/Projects/Swift/Test%20Folder/TestRealmMedium/TestRealmMedium/NewSecondViewController.swift"
-                  timestampString = "550701052.438743"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestRealmMedium/NewSecondViewController.swift"
+            timestampString = "550711173.964874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "updateValues()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
