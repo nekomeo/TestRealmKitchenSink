@@ -42,17 +42,32 @@ class NewSecondViewController: UIViewController {
     }
     
     func updateValues() {
-        let manager = APIManager()
-        manager.getTokenInfo { (endpointInfo, error) in
-            DispatchQueue.main.async {
-                if error != nil {
-                    print("\nSome error here\n")
-                }
-                else {
-                    print("\nInfo here is...: \(String(describing: endpointInfo))\n")
-                }
-            }
-        }
+        let serverAddress = URL(string: "http://localhost:3000/v1/coins_infos")
+        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJkZXZpY2VfaWQiOiJkZXZpY2UxIn0.hJUtGtgmKLdwRHEkjdhmHkrhQWW-Hnluxe6vhQmgALY"
+//        var tokenInfo = [List]()
+        
+        var request = URLRequest(url: serverAddress!)
+        request.httpMethod = "GET"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+            
+            print("JSON Data \(String(describing: jsonData))")
+        }.resume()
+        
+//        let manager = APIManager()
+//        manager.getTokenInfo { (endpointInfo, error) in
+//            DispatchQueue.main.async {
+//                if error != nil {
+//                    print("\nSome error here\n")
+//                }
+//                else {
+//                    print("\nInfo here is...: \(String(describing: endpointInfo))\n")
+//                }
+//            }
+//        }
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {

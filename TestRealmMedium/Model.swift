@@ -9,12 +9,17 @@
 import Foundation
 import RealmSwift
 
+public struct List: Decodable {
+    let coins_info: [CoinTokens]
+}
+
 public struct CoinTokens: Codable {
     public var full_name: String?
     public var symbol: String?
     public var image_url: String?
     public var updated_at: Int?
 }
+
 
 //public class CoinManager {
 //    public var tokenList = [CoinTokens]()
@@ -30,9 +35,9 @@ public class APIManager {
     
     let serverAddress = "http://localhost:3000/v1/coins_infos"
     let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJkZXZpY2VfaWQiOiJkZXZpY2UxIn0.hJUtGtgmKLdwRHEkjdhmHkrhQWW-Hnluxe6vhQmgALY"
-    var tokenInfo = [CoinTokens]()
+    var tokenInfo = [List]()
     
-    public func getTokenInfo(completion: @escaping ([CoinTokens]?, Error?) -> ()) {
+    public func getTokenInfo(completion: @escaping ([List]?, Error?) -> ()) {
         let addressURL = URL(string: "\(serverAddress)")
         
         var request = URLRequest(url: addressURL!)
@@ -49,7 +54,7 @@ public class APIManager {
             }
             guard let data = data else { return }
                 do {
-                    self.tokenInfo = try JSONDecoder().decode([CoinTokens].self, from: data)
+                    self.tokenInfo = try JSONDecoder().decode([List].self, from: data)
                     completion(self.tokenInfo, nil)
                 }
                 catch let jsonError {
