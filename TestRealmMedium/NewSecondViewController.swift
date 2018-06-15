@@ -19,12 +19,7 @@ class NewSecondViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var listTableView: UITableView!
     
-    var nameArray = [String]()
-    var symbolArray = [String]()
-    var imageArray = [String]()
-    var timeArray = [Int]()
-    
-    var coinArray = [Any]()
+    var coinArray = [CoinTokens]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,55 +46,25 @@ class NewSecondViewController: UIViewController {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            guard error == nil && data != nil else {
-                print("Error: \(error)")
+            if error != nil {
+                print(error)
                 return
             }
+            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, AnyObject>
+            print("JSON Data \(String(describing: jsonData))")
             
-            let httpStatus = response as? HTTPURLResponse
-            
-            if httpStatus!.statusCode == 200 {
-                if data?.count != 0 {
-                    let responseString = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary
-                    
-                    if let posts = responseString["coins_info"] as? [AnyObject] {
-                        for post in posts {
-                            let name = post["full_name"] as! String
-                            let symbol = post["symbol"] as! String
-                            let image = post["image_url"] as! String
-                            let time = post["updated_at"] as! Int
-                            
-                            DispatchQueue.main.async {
-                                self.nameArray.append(name)
-                                self.symbolArray.append(symbol)
-                                self.imageArray.append(image)
-                                self.timeArray.append(time)
-                                
-                                self.coinArray = [self.nameArray, self.symbolArray, self.imageArray, self.timeArray]
-                                print("Coin array: \(self.coinArray)")
-                                self.listTableView.reloadData()
-                            }
-                        }
-                    }
+            do {
+                let decoder = JSONDecoder()
+                let downloadedTokens = try decoder.decode([String:[CoinTokens]].self, from: data!)
+                
+                DispatchQueue.main.async {
+                    self.listTableView.reloadData()
                 }
             }
-//            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-//
-//            print("JSON Data \(String(describing: jsonData))")
-//            self.listTableView.reloadData()
+            catch {
+                print("Something went wrong after download")
+            }
         }.resume()
-        
-//        let manager = APIManager()
-//        manager.getTokenInfo { (endpointInfo, error) in
-//            DispatchQueue.main.async {
-//                if error != nil {
-//                    print("\nSome error here\n")
-//                }
-//                else {
-//                    print("\nInfo here is...: \(String(describing: endpointInfo))\n")
-//                }
-//            }
-//        }
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
